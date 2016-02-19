@@ -1,6 +1,6 @@
 var cssFilesToInject = [
-'bower_components/bootstrap/dist/css/bootstrap.css',
-'styles/**/*.css'
+'styles/importer.css'
+// 'styles/**/*.css'
 ];
 var jsFilesToInject = [
   'js/dependencies/sails.io.js',

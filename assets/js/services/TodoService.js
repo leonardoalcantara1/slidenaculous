@@ -29,4 +29,5 @@ todoApp.service('TodoService', function($http, $q) {
       });
       return defer.promise;
     }
-  }})
+  }
+})

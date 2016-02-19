@@ -1,27 +1,21 @@
-<div class="container" ng-controller="TodoCtrl">
-    <div class="jumbotron">
-        <h1 align="center">Todo Application</h1>
-        <br>
-        <div id="todo-form" class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control input-lg text-center" placeholder="Add Todo!" ng-model="formData.value">
-                        <br>
-                        <button type="submit" class="btn btn-primary btn-lg" ng-click="addTodo()">Add Todo</button>
-                    </div>
-                </form>
-            </div>
+<div class="row">
+    <form ng-submit="load()" class="large-12 columns">
+        <div class="large-10 columns">
+            <label><input type="search" ng-model="query"></label>
+        </div>
+        <button type="submit" class="button large-2 columns">O</button>
+    </form>
+    <div ng-if="musics && !slides" class="large-12 columns">
+        <div ng-repeat="music in musics" class="large-6 columns">
+            <a ng-click="initSlide(music)">
+                {{music.title}} <small>{{music.band}}</small>
+            </a>
         </div>
     </div>
-    <div id="todo-list" class="row">
-        <div class="col-sm-4 col-sm-offset-4">
-            <div class="checkbox" ng-repeat="todo in todos">
-                <label>
-                    <input type="checkbox" ng-click="removeTodo(todo)">
-                    {{ todo.value }}
-                </label>
-            </div>
+    <div class="large-12 columns" ng-if="!musics && slides">
+        <div ng-repeat="slide in slides" class="large-12 columns">
+            <span ng-bind-html="slide"></span>
+            <hr>
         </div>
     </div>
 </div>
