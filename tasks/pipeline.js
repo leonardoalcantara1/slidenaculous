@@ -4,14 +4,16 @@ var cssFilesToInject = [
 ];
 var jsFilesToInject = [
   'js/dependencies/sails.io.js',
-  '/bower_components/jquery/dist/jquery.js',
-  '/bower_components/angular/angular.js',
-  '/bower_components/angular-route/angular-route.js',
-  '/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-  '/bower_components/bootstrap/dist/js/bootstrap.js',
+  'js/jquery.min.js',
+  'js/angular.min.js',
+  'js/angular-route.min.js',
+  'js/ui-bootstrap-tpls.min.js',
+  'js/bootstrap.min.js',
+  'js/app.js',
+  'js/dependencies/services/TodoService.js',
   'js/dependencies/**/*.js',
 
-  'js/**/*.js'
+  //'js/**/*.js'
   ];
 
 var templateFilesToInject = [
