@@ -1,0 +1,14 @@
+<div class="large-12 columns" ng-if="!loading && slides" id="slider">
+    <div ng-repeat="slide in slides" class="large-12 columns slide">
+        <span ng-bind-html="slide" contenteditable="true"></span>
+        <hr>
+    </div>
+    <div class="large-12 columns div-button">
+        <button class="button" ng-click="slideNow()">
+            MONTAR SLIDER
+        </button>
+    </div>
+</div>
+<div class="large-12 columns" ng-if="loading && slides">
+    Carregando...
+</div>

@@ -1,0 +1,11 @@
+<div ng-if="musics && !loading" class="large-12 columns">
+    <div ng-repeat="music in musics" class="large-6 columns">
+        <a ng-click="load(music.id)">
+            {{music.title}}
+        </a>
+        <small>{{music.band}}</small>
+    </div>
+</div>
+<div class="large-12 columns" ng-if="loading">
+    Carregando...
+</div>

@@ -1,1 +1,46 @@
 @import url(foundation.min.css);
+@import url(fontawesome.css);
+
+body {
+	h1.title-site {
+		text-align: center;
+	}
+	form.search-form {
+		.columns {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	#slider.slideNow {
+		position: fixed;
+		z-index: 999999;
+		width: 100%;
+		background: #fff;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		text-align: center;
+		display: table;
+		.button {
+			display: none;
+		}
+		.slide.columns {
+			display: table-cell;
+			vertical-align: middle;
+			float: none;
+			max-width: 960px;
+			font-size: 34px;
+			font-weight: bold;
+			span {
+				display: inline-block;
+				text-align: left;
+			}
+			hr {
+				display: none;
+			}
+			&:not(.active) {
+				display: none;
+			}
+		}
+	}
+}
